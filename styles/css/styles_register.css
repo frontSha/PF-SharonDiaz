@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Afacad;
+    src: url(../assets/fonts/Afacad/Afacad-VariableFont_wght.ttf);
+}
+
+* {
+	box-sizing: border-box;
+    font-family: Afacad;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #121212;
+}
+
+.container {
+    color: whitesmoke;
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 40px;
+	background-color: #1b2024;
+	border-radius: 6px;
+}
+
+.form {
+    padding-top: 12px;
+	margin-bottom: 20px;
+}
+
+.form h3 {
+	color: #93c1cf !important;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+
+#login {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.botones-redes {
+	display: block;
+	width: 100px;
+	padding: 10px;
+	background: transparent;
+	border: none;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #a4d7e7;
+	border: solid 1px #a4d7e7;
+	border-radius: 8px;
+	padding: 6px;
+  }
+  
+  .botones-redes:hover {
+	background: #17191a;
+  }
+  
+  button[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	cursor: pointer;
+	font-weight: 700;
+	background: #a4d7e7;
+	color: #1b2024;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 1.2em;
+  }
+  
+  button[type="submit"]:hover {
+	background: #93c1cf;
+  }
+
+.return {
+	margin-top: 20px;
+	gap: 6px;
+
+	a {
+		color: whitesmoke;
+		text-decoration: none;
+	}
+	a:hover{
+		color: #93c1cf;
+	}
+}
+
+
+@media (max-width: 750px) {
+	body {
+	  background-color: #1b2024;
+	}
+
+	.container{
+		padding: 20px;
+	}
+  }
