@@ -1,0 +1,33 @@
+footer{
+    width: 100%;
+    background: $color-bg-secondary;
+    padding: 40px;
+    gap: 30px;
+    color: whitesmoke;
+
+    p {
+        color: $color-text-tertiary;
+        text-align: center;
+    }
+
+    .footer__links{
+        width: fit-content;
+
+        ul{
+            list-style: none;
+            margin: auto;
+            padding: 0;
+
+            li{
+                max-width: 9rem;
+                min-width: 5rem;
+                text-align: center;
+
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}

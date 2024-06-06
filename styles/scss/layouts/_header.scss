@@ -1,0 +1,82 @@
+header {
+    background: $color-bg-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 20px 40px;
+    gap: 16px;
+}
+
+.header__search{
+    min-width: 15rem;
+    width: 300px;
+    display: flex;
+    align-items: center;
+
+    &:focus-within{
+        background: $color-bg-secondary;
+        border-radius: 8px;
+        border-style: none;
+
+    }
+    
+    &--input{
+        background: transparent;
+        color: $color-text-primary;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &--input, &--icon{
+        font-size: 1.2em;
+        color: $color-text-quaternary;
+        padding: 6px;
+    }
+}
+
+.header__btns{
+    display: flex;
+    gap: 16px;
+    width: 15.625rem;
+    justify-content: flex-end;
+    
+    &--signin{
+        cursor: pointer;
+        font-weight: 700;
+        background: $color-btn;
+        color: $color-general;
+        width: 6rem;
+        
+        &:hover{
+            background: $color-main;
+        }
+    }
+    
+    &--login{
+        background: transparent;
+        color: $color-btn;
+        width: 6rem;
+        border: solid 1px $color-btn;
+        border-radius: 8px;
+        padding: 6px;
+        
+        &:hover{
+            background: $color-bg-secondary;
+        }
+    }
+    
+    &--input, &--signin{
+        border-radius: 8px; 
+        padding: 6px;
+        border-style: none;
+    }
+}
+
+// Crear mixins para botones
+
+
+
+

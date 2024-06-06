@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Afacad;
+  src: url(../assets/fonts/Afacad/Afacad-VariableFont_wght.ttf);
+}
+* {
+  font-family: Afacad;
+}
+
+.sidebar {
+  max-width: 200px;
+  min-width: 200px;
+  background: #1b2024;
+  position: sticky;
+  top: 0;
+}
+.sidebar__logo {
+  color: whitesmoke;
+  font-size: 2em;
+  cursor: pointer;
+}
+.sidebar .nav-item:hover, .sidebar .active {
+  background: #323b42;
+  border-radius: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: flex;
+}
+.nav-link i {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: flex;
+}
+.nav-link:hover {
+  color: whitesmoke;
+}
+
+.nav-link__offcanvas i {
+  color: whitesmoke !important;
+}
+
+header {
+  background: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 20px 40px;
+  gap: 16px;
+}
+
+.header__search {
+  min-width: 15rem;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.header__search:focus-within {
+  background: #17191a;
+  border-radius: 8px;
+  border-style: none;
+}
+.header__search--input {
+  background: transparent;
+  color: whitesmoke;
+}
+.header__search--input:focus {
+  outline: none;
+}
+.header__search--input, .header__search--icon {
+  font-size: 1.2em;
+  color: gray;
+  padding: 6px;
+}
+
+.header__btns {
+  display: flex;
+  gap: 16px;
+  width: 15.625rem;
+  justify-content: flex-end;
+}
+.header__btns--signin {
+  cursor: pointer;
+  font-weight: 700;
+  background: #a4d7e7;
+  color: #1b2024;
+  width: 6rem;
+}
+.header__btns--signin:hover {
+  background: #93c1cf;
+}
+.header__btns--login {
+  background: transparent;
+  color: #a4d7e7;
+  width: 6rem;
+  border: solid 1px #a4d7e7;
+  border-radius: 8px;
+  padding: 6px;
+}
+.header__btns--login:hover {
+  background: #17191a;
+}
+.header__btns--input, .header__btns--signin {
+  border-radius: 8px;
+  padding: 6px;
+  border-style: none;
+}
+
+footer {
+  width: 100%;
+  background: #17191a;
+  padding: 40px;
+  gap: 30px;
+  color: whitesmoke;
+}
+footer p {
+  color: rgba(245, 245, 245, 0.808);
+  text-align: center;
+}
+footer .footer__links {
+  width: fit-content;
+}
+footer .footer__links ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+footer .footer__links ul li {
+  max-width: 9rem;
+  min-width: 5rem;
+  text-align: center;
+}
+footer .footer__links ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/*# sourceMappingURL=styles.css.map */
