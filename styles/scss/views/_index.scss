@@ -1,0 +1,144 @@
+.section-info{
+    color: $color-text-primary;
+    width: 100%;
+    padding: 40px;
+    
+    &__heading h1{
+        color: $color-main;
+        font-size: 3em;
+        text-align: center;
+    }
+    & h2{
+        font-size: 2em;
+        text-align: center;
+    }
+    & p{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    &__button--signin{
+        padding: 6px;
+        background: $color-btn;
+        border-radius: 8px;
+        color: $color-general;
+        border-style: none;
+        cursor: pointer;
+        font-weight: 700;
+        width: 9rem;
+        font-size: 1.3em;
+
+        &:hover{
+            background: $color-main;
+        }
+    }
+}
+
+.artist-section{
+    padding: 40px;
+    background: $color-bg-secondary;
+    display: grid;
+    gap: 30px;
+    
+    &__heading{
+        color: $color-main;
+        font-size: 3em;
+        text-align: center;
+    }
+    &__grid{
+        max-width: 100%;
+    }
+}
+
+.artists__card{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    &--img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    &--rank{
+        display: flex !important;
+        align-items: center;
+        gap: 5px;
+
+        & h3, & h2{
+            font-size: 1.5em;
+            color: $color-text-primary !important;
+        }
+    }
+    & h5{
+        color: $color-text-tertiary;
+        font-size: 1rem;
+    }
+}
+
+.section-review{
+    padding: 40px;
+    max-width: 100%;
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+
+    &__heading{
+        color: $color-main;
+        text-align: center;
+    }
+    &__container{
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.container-review__card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-bg-secondary;
+    padding: 20px;
+    border-radius: 8px;
+    color: $color-text-primary;
+    max-width: 25rem;
+    min-width: 20rem;
+    gap: 1rem;
+
+    .card-review__left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        &--img{
+            max-width: 9rem;
+            max-height: 9rem;
+            margin: 10px;
+        }
+        & h3{
+            font-size: 1.5em;
+        }
+        & h4{
+            font-size: 1.25em;
+            color: $color-text-secondary;
+        }
+    }
+    .card-review__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & a{
+            color: $color-main;
+            text-decoration: none;
+        }
+        & h5{
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        & p, & h6{
+            color: $color-text-secondary;
+        }
+    }
+}

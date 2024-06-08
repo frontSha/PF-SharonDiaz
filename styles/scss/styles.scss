@@ -1,3 +1,6 @@
-@import './root/colors', './root/fonts';
+@import './root/colors', './root/fonts', './root/base';
 
 @import './layouts/sidebar', './layouts/header', './layouts/footer';
+
+@import './views/index', './views/explore', './views/lists', './views/reviews', './views/forums';
+@import './utilities/responsive';

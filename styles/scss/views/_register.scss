@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    height: 100vh;
+    background: $color-bg-primary;
+}
+
+.container {
+    color: $color-text-primary;
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 40px;
+	background-color: $color-general;
+	border-radius: 6px;
+}
+
+.form {
+    padding-top: 12px;
+	margin-bottom: 20px;
+    h3 {
+        color: $color-main !important;
+    }
+}
+
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+
+#login {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.botones-redes {
+	display: block;
+	width: 100px;
+	padding: 10px;
+	background: transparent;
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: $color-btn;
+	border: solid 1px $color-btn;
+	border-radius: 8px;
+	padding: 6px;
+
+    &:hover {
+    	background: $color-bg-secondary;
+    }
+  }
+  
+  
+  button[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	font-weight: 700;
+	background: $color-btn;
+	color: $color-general;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 1.2em;
+
+        &:hover {
+        	background: $color-main;
+        }
+  }
+  
+
+.return {
+	margin-top: 20px;
+	gap: 6px;
+
+	a {
+		color: $color-text-primary;
+		text-decoration: none;
+
+        &:hover{
+            color: $color-main;
+        }
+	}
+}
+
+
+@media (max-width: 750px) {
+	body {
+	  background-color: $color-general;
+	}
+
+	.container{
+		padding: 20px;
+	}
+  }

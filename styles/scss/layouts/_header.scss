@@ -24,6 +24,7 @@ header {
     &--input{
         background: transparent;
         color: $color-text-primary;
+        border-style: none;
 
         &:focus{
             outline: none;

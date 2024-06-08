@@ -1,0 +1,51 @@
+.heading-lists{
+    h2{
+       color: $color-main;
+       font-size: 2.4em;
+    }
+    &__search--input{
+        max-width: 27rem;
+        min-width: max-content;
+    }
+}
+
+.section-lists{
+    &__card{
+        background: $color-bg-secondary;
+        border-radius: 10px;
+
+        &--left img{
+            height: 100%;
+        }
+        &--right p:last-child{
+            @extend .card-subtitle;
+        }
+    }
+    &__p{
+        text-decoration: none;
+        background: $color-bg-secondary;
+        border-radius: 6px;
+        padding: 8px;
+        color: $color-main;
+        
+        &:hover{
+            background: $color-bg-secondary;
+            padding: 9px;
+            cursor: pointer;
+            border: 1px solid $color-btn;
+        }
+    }
+}
+
+.card-title{
+    color: #93c1cff5;
+}
+
+.card-text{
+    color: $color-text-primary;
+}
+
+.card-subtitle{
+    color: $color-text-secondary;
+}
+
