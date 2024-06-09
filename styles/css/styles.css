@@ -307,13 +307,20 @@ footer .footer__links ul li a {
 .section-explore .search-explore {
   max-width: 21rem;
   min-width: max-content;
+  margin-bottom: 20px;
 }
 .section-explore .search-explore .search::placeholder {
   color: gray;
 }
+.section-explore a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  color: #93c1cf;
+}
 .section-explore .grid-explore {
   width: 100%;
-  padding: 40px 0 0;
+  padding: 0 40px 0 0;
 }
 .section-explore .grid-explore .grid-item {
   width: 9.75rem;

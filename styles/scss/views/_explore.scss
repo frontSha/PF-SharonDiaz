@@ -7,14 +7,19 @@
     .search-explore{
         max-width: 21rem;
         min-width: max-content;
+        margin-bottom: 20px;
 
         .search::placeholder{
             color: $color-text-quaternary;
         }
     }
+    a{
+        text-decoration: none;
+        @include font(1em, 500, $color-main);
+    }
     .grid-explore{
         width: 100%;
-        padding: 40px 0 0;
+        padding: 0 40px 0 0;
 
         .grid-item{
             width: 9.75rem;
