@@ -3,3 +3,9 @@
 * {
   font-family: Afacad;
 }
+
+@mixin font($fs, $fw, $color){
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
