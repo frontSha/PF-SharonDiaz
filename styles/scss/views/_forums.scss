@@ -1,0 +1,97 @@
+.heading-forums{
+    color: $color-main;
+    padding: 40px 40px 0 150px;
+    font-size: 2.4em;
+}
+.content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+}
+.section-forums{
+    padding: 40px 40px 0 150px;
+    .music-forum, .general-forum{
+        padding-bottom: 40px;
+    }
+    h3{
+        color: $color-main;
+    }
+    table{
+        background-color: transparent;
+        border-style: none;
+        width: 100%;
+        border: solid 1px $color-text-quaternary;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        tbody{
+            tr:hover{
+                background-color: #25282A;
+            }
+        }
+        thead{
+            th{
+                color: $color-text-primary;
+                @extend td;
+                font-size: 1.1em;
+            }
+            background-color: $color-bg-secondary;
+        }
+    }
+    td{
+        padding: 10px;
+        padding-inline-start: 1rem;
+    }
+    a{
+        text-decoration: none;
+        color: $color-text-secondary;
+        font-size: 1.05em;
+        i{
+            margin-right: 1rem;
+        }
+    }
+    p{
+        color: $color-text-quaternary;
+        margin-bottom: 0;
+    }
+}
+
+aside{
+    padding: 40px;
+    h3{
+        color: $color-main;
+        margin-bottom: 1rem;
+    }
+    ul{
+        list-style: none;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        padding-inline-start: 0;
+
+        li{
+            display: flex;
+            flex-direction: column;
+            max-width: 15rem;
+            a{
+                text-decoration: none;
+                color: $color-text-secondary;
+                &:hover{
+                    color: $color-text-tertiary;
+                }
+                i{
+                    margin-right: .5rem;
+                }
+            }
+            span{
+                color: $color-text-quaternary;
+                padding-inline-start: 25px;
+                font-size: .85em;
+            }
+            hr{
+                color: $color-text-quaternary;
+            }
+        }
+    }
+}

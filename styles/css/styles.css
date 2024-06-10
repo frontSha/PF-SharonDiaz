@@ -502,6 +502,100 @@ section {
 }
 .ver-mas:hover {
   background: #17191a;
+.heading-forums {
+  color: #93c1cf;
+  padding: 40px 40px 0 150px;
+  font-size: 2.4em;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: auto;
+}
+
+.section-forums {
+  padding: 40px 40px 0 150px;
+}
+.section-forums .music-forum, .section-forums .general-forum {
+  padding-bottom: 40px;
+}
+.section-forums h3 {
+  color: #93c1cf;
+}
+.section-forums table {
+  background-color: transparent;
+  border-style: none;
+  width: 100%;
+  border: solid 1px gray;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.section-forums table tbody tr:hover {
+  background-color: #25282A;
+}
+.section-forums table thead {
+  background-color: #17191a;
+}
+.section-forums table thead th {
+  color: whitesmoke;
+  font-size: 1.1em;
+}
+.section-forums td, .section-forums table thead th {
+  padding: 10px;
+  padding-inline-start: 1rem;
+}
+.section-forums a {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.904);
+  font-size: 1.05em;
+}
+.section-forums a i {
+  margin-right: 1rem;
+}
+.section-forums p {
+  color: gray;
+  margin-bottom: 0;
+}
+
+aside {
+  padding: 40px;
+}
+aside h3 {
+  color: #93c1cf;
+  margin-bottom: 1rem;
+}
+aside ul {
+  list-style: none;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+}
+aside ul li {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+}
+aside ul li a {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.904);
+}
+aside ul li a:hover {
+  color: rgba(245, 245, 245, 0.808);
+}
+aside ul li a i {
+  margin-right: 0.5rem;
+}
+aside ul li span {
+  color: gray;
+  padding-inline-start: 25px;
+  font-size: 0.85em;
+}
+aside ul li hr {
+  color: gray;
 }
 
 @media (max-width: 576px) {
