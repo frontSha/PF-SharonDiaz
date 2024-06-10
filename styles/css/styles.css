@@ -340,6 +340,72 @@ footer .footer__links ul li a {
   color: rgba(245, 245, 245, 0.904);
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+section {
+  padding: 40px 40px 0;
+}
+section .music-forum, section .general-forum {
+  padding-bottom: 40px;
+}
+section h2 {
+  color: #93c1cf;
+}
+section table {
+  background-color: transparent;
+  border-style: none;
+  padding: 40px;
+  width: 100%;
+}
+section thead {
+  background-color: #17191a;
+}
+section th {
+  color: whitesmoke;
+  font-size: 1.1em;
+}
+section td, section th {
+  padding: 10px;
+  padding-inline-start: 1rem;
+}
+section a {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.904);
+  font-size: 1.05em;
+}
+section a i {
+  margin-right: 1rem;
+}
+section p {
+  color: gray;
+  margin-bottom: 0;
+}
+
+aside {
+  padding: 40px;
+}
+aside h3 {
+  color: #93c1cf;
+}
+aside ul {
+  list-style: none;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline-start: 1rem;
+}
+aside ul a {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.904);
+}
+aside ul a:hover {
+  color: rgba(245, 245, 245, 0.808);
+}
+
 @media (max-width: 576px) {
   .section-review {
     padding: 40px 20px;

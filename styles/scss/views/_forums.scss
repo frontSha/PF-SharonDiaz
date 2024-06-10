@@ -1,0 +1,66 @@
+.content{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+section{
+    padding: 40px 40px 0;
+    .music-forum, .general-forum{
+        padding-bottom: 40px;
+    }
+    h2{
+        color: $color-main;
+    }
+    table{
+        background-color: transparent;
+        border-style: none;
+        padding: 40px;
+        width: 100%;
+    }
+    thead{
+        background-color: $color-bg-secondary;
+    }
+    th{
+        color: $color-text-primary;
+        @extend td;
+        font-size: 1.1em;
+    }
+    td{
+        padding: 10px;
+        padding-inline-start: 1rem;
+    }
+    a{
+        text-decoration: none;
+        color: $color-text-secondary;
+        font-size: 1.05em;
+        i{
+            margin-right: 1rem;
+        }
+    }
+    p{
+        color: $color-text-quaternary;
+        margin-bottom: 0;
+    }
+}
+
+aside{
+    padding: 40px;
+    h3{
+        color: $color-main;
+    }
+    ul{
+        list-style: none;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-inline-start: 1rem;
+
+        a{
+            text-decoration: none;
+            color: $color-text-secondary;
+            &:hover{
+                color: $color-text-tertiary;
+            }
+        }
+    }
+}
