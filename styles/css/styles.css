@@ -340,34 +340,46 @@ footer .footer__links ul li a {
   color: rgba(245, 245, 245, 0.904);
 }
 
+.heading-forums {
+  color: #93c1cf;
+  padding: 40px 40px 0 100px;
+}
+
 .content {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 70% 30%;
 }
 
 section {
-  padding: 40px 40px 0;
+  padding: 40px 40px 0 100px;
 }
 section .music-forum, section .general-forum {
   padding-bottom: 40px;
 }
-section h2 {
+section h3 {
   color: #93c1cf;
 }
 section table {
   background-color: transparent;
   border-style: none;
-  padding: 40px;
   width: 100%;
+  border: solid 1px gray;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
-section thead {
+section table tbody tr:hover {
+  background-color: #25282A;
+}
+section table thead {
   background-color: #17191a;
 }
-section th {
+section table thead th {
   color: whitesmoke;
   font-size: 1.1em;
 }
-section td, section th {
+section td, section table thead th {
   padding: 10px;
   padding-inline-start: 1rem;
 }
@@ -396,14 +408,27 @@ aside ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-inline-start: 1rem;
+  padding-inline-start: 0;
 }
-aside ul a {
+aside ul li {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+}
+aside ul li a {
   text-decoration: none;
   color: rgba(245, 245, 245, 0.904);
 }
-aside ul a:hover {
+aside ul li a:hover {
   color: rgba(245, 245, 245, 0.808);
+}
+aside ul li a i {
+  margin-right: 0.5rem;
+}
+aside ul li span {
+  color: gray;
+  border-bottom: solid 0.05px gray;
+  padding-inline-start: 25px;
 }
 
 @media (max-width: 576px) {

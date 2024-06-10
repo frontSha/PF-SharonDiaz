@@ -1,28 +1,41 @@
+.heading-forums{
+    color: $color-main;
+    padding: 40px 40px 0 100px;
+}
 .content{
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
 }
 section{
-    padding: 40px 40px 0;
+    padding: 40px 40px 0 100px;
     .music-forum, .general-forum{
         padding-bottom: 40px;
     }
-    h2{
+    h3{
         color: $color-main;
     }
     table{
         background-color: transparent;
         border-style: none;
-        padding: 40px;
         width: 100%;
-    }
-    thead{
-        background-color: $color-bg-secondary;
-    }
-    th{
-        color: $color-text-primary;
-        @extend td;
-        font-size: 1.1em;
+        border: solid 1px $color-text-quaternary;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        tbody{
+            tr:hover{
+                background-color: #25282A;
+            }
+        }
+        thead{
+            th{
+                color: $color-text-primary;
+                @extend td;
+                font-size: 1.1em;
+            }
+            background-color: $color-bg-secondary;
+        }
     }
     td{
         padding: 10px;
@@ -53,13 +66,26 @@ aside{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding-inline-start: 1rem;
+        padding-inline-start: 0;
 
-        a{
-            text-decoration: none;
-            color: $color-text-secondary;
-            &:hover{
-                color: $color-text-tertiary;
+        li{
+            display: flex;
+            flex-direction: column;
+            max-width: 15rem;
+            a{
+                text-decoration: none;
+                color: $color-text-secondary;
+                &:hover{
+                    color: $color-text-tertiary;
+                }
+                i{
+                    margin-right: .5rem;
+                }
+            }
+            span{
+                color: $color-text-quaternary;
+                border-bottom: solid .05px $color-text-quaternary;
+                padding-inline-start: 25px;
             }
         }
     }
