@@ -1,15 +1,14 @@
 .heading-forums{
-    color: $color-main;
-    padding: 40px 40px 0 150px;
-    font-size: 2.4em;
+    @include font(2.4em,600,$color-main);
+    padding: 40px 48px 0;
 }
-.content{
+.container-forums{
     display: grid;
     grid-template-columns: 70% 30%;
     margin: auto;
 }
 .section-forums{
-    padding: 40px 40px 0 150px;
+    padding: 40px 48px 0;
     .music-forum, .general-forum{
         padding-bottom: 40px;
     }
@@ -27,14 +26,13 @@
         overflow: hidden;
         tbody{
             tr:hover{
-                background-color: #25282A;
+                background-color: $color-bg-tertiary;
             }
         }
         thead{
             th{
-                color: $color-text-primary;
                 @extend td;
-                font-size: 1.1em;
+                @include font(1.1em,600,$color-text-primary);
             }
             background-color: $color-bg-secondary;
         }
@@ -45,8 +43,7 @@
     }
     a{
         text-decoration: none;
-        color: $color-text-secondary;
-        font-size: 1.05em;
+        @include font(1.05em, 100, $color-text-secondary);
         i{
             margin-right: 1rem;
         }
@@ -58,7 +55,7 @@
 }
 
 aside{
-    padding: 40px;
+    padding: 40px 48px;
     h3{
         color: $color-main;
         margin-bottom: 1rem;
@@ -85,9 +82,8 @@ aside{
                 }
             }
             span{
-                color: $color-text-quaternary;
                 padding-inline-start: 25px;
-                font-size: .85em;
+                @include font(.85em,400,$color-text-quaternary);
             }
             hr{
                 color: $color-text-quaternary;

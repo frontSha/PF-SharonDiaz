@@ -5,7 +5,7 @@ header {
     align-items: center;
     height: 5rem;
     padding: 20px 40px;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .header__search{
@@ -23,8 +23,8 @@ header {
     
     &--input{
         background: transparent;
-        color: $color-text-primary;
         border-style: none;
+        min-width: 16rem;
 
         &:focus{
             outline: none;
@@ -32,8 +32,7 @@ header {
     }
 
     &--input, &--icon{
-        font-size: 1.2em;
-        color: $color-text-quaternary;
+        @include font(1.2em,200,$color-text-quaternary);
         padding: 6px;
     }
 }

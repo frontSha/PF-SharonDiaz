@@ -3,9 +3,15 @@
        color: $color-main;
        font-size: 2.4em;
     }
+    label{
+        font-weight: 500;
+    }
     &__search--input{
         max-width: 27rem;
         min-width: max-content;
+        .search-list::placeholder{
+            color: $color-text-quaternary;
+        }
     }
 }
 
@@ -21,19 +27,10 @@
             @extend .card-subtitle;
         }
     }
-    &__p{
-        text-decoration: none;
-        background: $color-bg-secondary;
-        border-radius: 6px;
-        padding: 8px;
-        color: $color-main;
-        
-        &:hover{
-            background: $color-bg-secondary;
-            padding: 9px;
-            cursor: pointer;
-            border: 1px solid $color-btn;
-        }
+    &__a{
+        @extend .ver-mas;
+        display: inline-block;
+        text-align: center;
     }
 }
 

@@ -26,15 +26,16 @@ main {
 }
 
 .sidebar {
-  max-width: 200px;
-  min-width: 200px;
+  max-width: 230px;
+  min-width: 230px;
   background: #1b2024;
   position: sticky;
   top: 0;
 }
 .sidebar__logo {
-  color: whitesmoke;
   font-size: 2em;
+  font-weight: 700;
+  color: whitesmoke;
   cursor: pointer;
 }
 .sidebar .nav-item:hover, .sidebar .active {
@@ -71,7 +72,7 @@ header {
   align-items: center;
   height: 5rem;
   padding: 20px 40px;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .header__search {
@@ -87,14 +88,15 @@ header {
 }
 .header__search--input {
   background: transparent;
-  color: whitesmoke;
   border-style: none;
+  min-width: 16rem;
 }
 .header__search--input:focus {
   outline: none;
 }
 .header__search--input, .header__search--icon {
   font-size: 1.2em;
+  font-weight: 200;
   color: gray;
   padding: 6px;
 }
@@ -299,7 +301,8 @@ footer .footer__links ul li a {
 }
 
 .section-explore {
-  padding: 40px 40px 0;
+  padding: 40px 48px 0;
+  justify-content: center;
 }
 .section-explore h1 {
   color: #93c1cf;
@@ -320,7 +323,7 @@ footer .footer__links ul li a {
 }
 .section-explore .grid-explore {
   width: 100%;
-  padding: 0 40px 0 0;
+  padding: 0 48px 0 0;
 }
 .section-explore .grid-explore .grid-item {
   width: 9.75rem;
@@ -352,7 +355,7 @@ footer .footer__links ul li a {
 }
 
 .section-all {
-  padding: 40px;
+  padding: 40px 48px;
 }
 .section-all h2 {
   color: #93c1cf;
@@ -390,9 +393,15 @@ footer .footer__links ul li a {
   color: #93c1cf;
   font-size: 2.4em;
 }
+.heading-lists label {
+  font-weight: 500;
+}
 .heading-lists__search--input {
   max-width: 27rem;
   min-width: max-content;
+}
+.heading-lists__search--input .search-list::placeholder {
+  color: gray;
 }
 
 .section-lists__card {
@@ -402,18 +411,9 @@ footer .footer__links ul li a {
 .section-lists__card--left img {
   height: 100%;
 }
-.section-lists__p {
-  text-decoration: none;
-  background: #17191a;
-  border-radius: 6px;
-  padding: 8px;
-  color: #93c1cf;
-}
-.section-lists__p:hover {
-  background: #17191a;
-  padding: 9px;
-  cursor: pointer;
-  border: 1px solid #a4d7e7;
+.section-lists__a {
+  display: inline-block;
+  text-align: center;
 }
 
 .card-title {
@@ -432,7 +432,10 @@ footer .footer__links ul li a {
   width: 100%;
 }
 .heading h2 {
-  color: whitesmoke;
+  font-size: 2.4em;
+  font-weight: 500;
+  color: #93c1cf;
+  text-align: center;
 }
 
 .content {
@@ -440,7 +443,7 @@ footer .footer__links ul li a {
   min-width: 22rem;
 }
 
-section {
+.reviews {
   padding: 40px;
 }
 
@@ -487,35 +490,36 @@ section {
   height: 25px;
 }
 
-.ver-mas {
-  padding: 6px;
-  background: transparent;
-  color: #a4d7e7;
-  border-style: none;
-  border: solid 1px #a4d7e7;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  width: 9rem;
-  font-size: 1.3em;
-  text-decoration: none;
-}
-.ver-mas:hover {
+.ver-mas, .section-lists__a {
+  padding: 10px;
   background: #17191a;
-.heading-forums {
-  color: #93c1cf;
-  padding: 40px 40px 0 150px;
-  font-size: 2.4em;
+  border-style: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: rgba(245, 245, 245, 0.808);
+}
+.ver-mas:hover, .section-lists__a:hover {
+  border: solid 1px gray;
+  background: #25282A;
 }
 
-.content {
+.heading-forums {
+  font-size: 2.4em;
+  font-weight: 600;
+  color: #93c1cf;
+  padding: 40px 48px 0;
+}
+
+.container-forums {
   display: grid;
   grid-template-columns: 70% 30%;
   margin: auto;
 }
 
 .section-forums {
-  padding: 40px 40px 0 150px;
+  padding: 40px 48px 0;
 }
 .section-forums .music-forum, .section-forums .general-forum {
   padding-bottom: 40px;
@@ -540,8 +544,9 @@ section {
   background-color: #17191a;
 }
 .section-forums table thead th {
-  color: whitesmoke;
   font-size: 1.1em;
+  font-weight: 600;
+  color: whitesmoke;
 }
 .section-forums td, .section-forums table thead th {
   padding: 10px;
@@ -549,8 +554,9 @@ section {
 }
 .section-forums a {
   text-decoration: none;
-  color: rgba(245, 245, 245, 0.904);
   font-size: 1.05em;
+  font-weight: 100;
+  color: rgba(245, 245, 245, 0.904);
 }
 .section-forums a i {
   margin-right: 1rem;
@@ -561,7 +567,7 @@ section {
 }
 
 aside {
-  padding: 40px;
+  padding: 40px 48px;
 }
 aside h3 {
   color: #93c1cf;
@@ -590,14 +596,108 @@ aside ul li a i {
   margin-right: 0.5rem;
 }
 aside ul li span {
-  color: gray;
   padding-inline-start: 25px;
   font-size: 0.85em;
+  font-weight: 400;
+  color: gray;
 }
 aside ul li hr {
   color: gray;
 }
 
+.main-register {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #121212;
+}
+
+.container {
+  color: whitesmoke;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #1b2024;
+  border-radius: 6px;
+}
+
+.form {
+  padding-top: 12px;
+  margin-bottom: 20px;
+}
+.form h3 {
+  color: #93c1cf !important;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.botones-redes {
+  display: block;
+  width: 100px;
+  background: transparent;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #a4d7e7;
+  border: solid 1px #a4d7e7;
+  border-radius: 8px;
+  padding: 6px;
+}
+.botones-redes:hover {
+  background: #17191a;
+}
+
+#boton-registro {
+  width: 100%;
+  padding: 10px;
+  background: #a4d7e7;
+  cursor: pointer;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #1b2024;
+}
+#boton-registro:hover {
+  background: #93c1cf;
+}
+
+.return {
+  margin-top: 20px;
+  gap: 6px;
+}
+.return a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.return a:hover {
+  color: #93c1cf;
+}
+
+@media (max-width: 750px) {
+  .main-register {
+    background-color: #1b2024;
+  }
+  .container {
+    padding: 20px;
+  }
+  .container h1 {
+    font-size: 2.25em;
+    font-weight: 600;
+    color: whitesmoke;
+  }
+}
 @media (max-width: 576px) {
   .section-review {
     padding: 40px 20px;

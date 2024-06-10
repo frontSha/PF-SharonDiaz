@@ -1,14 +1,15 @@
 .heading {
   width: 100%;
   & h2 {
-    color: $color-text-primary;
+    @include font(2.4em,500,$color-main);
+    text-align: center;
   }
 }
 .content {
   max-width: 60rem;
   min-width: 22rem;
 }
-section {
+.reviews {
   padding: 40px;
 }
 .section-left {
@@ -47,19 +48,15 @@ section {
 }
 
 .ver-mas {
-  padding: 6px;
-  background: transparent;
-  color: $color-btn;
+  padding: 10px;
+  background: $color-bg-secondary;
   border-style: none;
-  border: solid 1px $color-btn;
   border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  width: 9rem;
-  font-size: 1.3em;
   text-decoration: none;
+  @include font(1.2em,400,$color-text-tertiary);
 
   &:hover {
-    background: $color-bg-secondary;
+    border: solid 1px $color-text-quaternary;
+    background: $color-bg-tertiary;
   }
 }

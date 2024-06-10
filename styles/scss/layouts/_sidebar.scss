@@ -1,13 +1,12 @@
 .sidebar{
-    max-width: 200px;
-    min-width: 200px;
+    max-width: 230px;
+    min-width: 230px;
     background: $color-general;
     position: sticky;
     top: 0;
 
     &__logo{
-        color: $color-text-primary;
-        font-size: 2em;
+        @include font(2em,700,$color-text-primary);
         cursor: pointer;
     }
 

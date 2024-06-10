@@ -1,6 +1,7 @@
-body {
+.main-register {
     display: flex;
     height: 100vh;
+	width: 100%;
     background: $color-bg-primary;
 }
 
@@ -38,7 +39,6 @@ label {
 .botones-redes {
 	display: block;
 	width: 100px;
-	padding: 10px;
 	background: transparent;
 	text-align: center;
 	font-size: 1em;
@@ -55,15 +55,14 @@ label {
   }
   
   
-  button[type="submit"] {
+  #boton-registro {
 	width: 100%;
 	padding: 10px;
-	font-weight: 700;
 	background: $color-btn;
-	color: $color-general;
 	cursor: pointer;
 	border-radius: 8px;
-	font-size: 1.2em;
+	border-style: none;
+	@include font(1.2em,700,$color-general);
 
         &:hover {
         	background: $color-main;
@@ -87,11 +86,14 @@ label {
 
 
 @media (max-width: 750px) {
-	body {
+	.main-register {
 	  background-color: $color-general;
 	}
 
 	.container{
 		padding: 20px;
+		h1{
+			@include font(2.25em,600,$color-text-primary);
+		}
 	}
   }

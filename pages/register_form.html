@@ -17,70 +17,72 @@
     <link rel="stylesheet" type="text/css" href="../styles/css/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <form action="#" method="post">
-        <h1 class="text-center">Musify.</h1>
-        <h3 class="text-center">Regístrate con nosotros</h3>
-        <div class="row m-1 mb-3 mt-4 justify-content-center">
-          <input
-            class="col-12 form-control"
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Nombre de usuario"
-            data-bs-theme="dark"
-            required
-          />
-        </div>
-        <div class="row m-1 mb-3 justify-content-center">
-          <input
-            class="col-12 form-control"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Correo electrónico"
-            data-bs-theme="dark"
-            required
-          />
-        </div>
-        <div class="row m-1 justify-content-center">
-          <input
-            class="col-12 form-control"
-            type="password"
-            class="col-12"
-            id="clave"
-            name="clave"
-            placeholder="Contraseña"
-            data-bs-theme="dark"
-            required
-          />
-        </div>
-        <div class="row mt-3">
-          <div class="col-12">
-            <label for="avatar" class="form-label">Foto de perfil:</label>
+    <main class="main-register">
+      <div class="container">
+        <form action="#" method="post">
+          <h1 class="text-center">Musify.</h1>
+          <h3 class="text-center">Regístrate con nosotros</h3>
+          <div class="row m-1 mb-3 mt-4 justify-content-center">
             <input
+              class="col-12 form-control"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Nombre de usuario"
               data-bs-theme="dark"
-              class="form-control"
-              type="file"
-              id="avatar"
+              required
             />
           </div>
-        </div>
-
-        <div class="form mt-3">
-          <label for="login">Regístrate también usando:</label>
-          <div id="login" class="pt-2">
-            <a href="#" class="botones-redes">Google</a>
-            <a href="#" class="botones-redes">Twitter</a>
-            <a href="#" class="botones-redes">Facebook</a>
+          <div class="row m-1 mb-3 justify-content-center">
+            <input
+              class="col-12 form-control"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Correo electrónico"
+              data-bs-theme="dark"
+              required
+            />
           </div>
-        </div>
-        <button type="submit" id="boton-registro">Registrarse</button>
-        <div class="return d-flex align-items-center">
-          <i class="ri-arrow-left-circle-line"></i>
-          <h5 class="m-0"><a href="../index.html">Volver al inicio</a></h5>
-        </div>
-      </form>
-    </div>
+          <div class="row m-1 justify-content-center">
+            <input
+              class="col-12 form-control"
+              type="password"
+              class="col-12"
+              id="clave"
+              name="clave"
+              placeholder="Contraseña"
+              data-bs-theme="dark"
+              required
+            />
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <label for="avatar" class="form-label">Foto de perfil:</label>
+              <input
+                data-bs-theme="dark"
+                class="form-control"
+                type="file"
+                id="avatar"
+              />
+            </div>
+          </div>
+  
+          <div class="form mt-3">
+            <label for="login">Regístrate también usando:</label>
+            <div id="login" class="pt-2">
+              <a href="#" class="botones-redes">Google</a>
+              <a href="#" class="botones-redes">Twitter</a>
+              <a href="#" class="botones-redes">Facebook</a>
+            </div>
+          </div>
+          <button type="submit" id="boton-registro">Registrarse</button>
+          <div class="return d-flex align-items-center">
+            <i class="ri-arrow-left-circle-line"></i>
+            <h5 class="m-0"><a href="../index.html">Volver al inicio</a></h5>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>

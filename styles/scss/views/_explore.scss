@@ -1,5 +1,6 @@
 .section-explore{
-    padding: 40px 40px 0;
+    padding: 40px 48px 0;
+    justify-content: center;
 
     h1{
         color: $color-main;
@@ -19,7 +20,7 @@
     }
     .grid-explore{
         width: 100%;
-        padding: 0 40px 0 0;
+        padding: 0 48px 0 0;
 
         .grid-item{
             width: 9.75rem;
@@ -53,7 +54,7 @@
 }
 
 .section-all{
-    padding: 40px;
+    padding: 40px 48px;
 
     h2{
         color: $color-main;
