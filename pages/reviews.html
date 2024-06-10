@@ -1,154 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Musify - Reseñas</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
     />
-    <link rel="stylesheet" href="../styles/css/styles.css">
-</head>
-<body>
-    <main>
-        <div class="sidebar">
-            <nav class="navbar">
-                <div class="logo-nav">
-                    <h1 class="logo">Musify.</h1>
-                </div>
-                <div class="item">
-                    <i class="ri-home-2-line"></i>
-                    <a href="../index.html">Inicio</a>
-                </div>
-                <div class="item">
-                    <i class="ri-menu-search-line"></i>
-                    <a href="./explore.html">Explorar</a>
-                </div>
-                <div class="item">
-                    <i class="ri-play-list-line"></i>
-                    <a href="./lists.html">Listas</a>
-                </div>
-                <div class="item">
-                    <i class="ri-star-line"></i>
-                    <a href="./reviews.html">Reseñas</a>
-                </div>
-                <div class="item">
-                    <i class="ri-user-smile-line"></i>
-                    <a href="./forums.html">Foros</a>
-                </div>
-            </nav>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/css/styles.css" />
+  </head>
+  <body>
+    <main class="d-flex no-wrap">
+      <div
+        class="sidebar d-flex flex-column flex-shrink-0 p-xl-3 d-none d-md-block"
+      >
+        <div
+          class="sidebar__logo d-flex align-items-center justify-content-center mb-3"
+        >
+          <h1 class="d-none d-xl-block">Musify.</h1>
+          <img
+            class="mt-3 d-block d-xl-none"
+            src="../assets/icons/musi.png"
+            alt=""
+            width="25"
+            height="25"
+          />
         </div>
-        <div class="container-right">
-            <header>
-                <div class="search-bar">
-                    <i class="ri-search-line"></i>
-                    <input type="search" name="fieldSearch" id="searchBar" class="searchBar" placeholder="Buscar"/>
+        <ul class="sidebar__nav nav flex-column mb-auto gap-3">
+          <li class="nav-item text-center text-xl-start">
+            <a href="../index.html" class="nav-link" aria-current="page"
+              ><i class="ri-home-2-line pe-none me-xl-3"></i>
+              <p class="d-none d-xl-block">Inicio</p>
+            </a>
+          </li>
+          <li class="nav-item text-center text-xl-start">
+            <a href="./explore.html" class="nav-link"
+              ><i class="ri-menu-search-line pe-none me-xl-3"></i>
+              <p class="d-none d-xl-block">Explorar</p>
+            </a>
+          </li>
+          <li class="nav-item text-center text-xl-start">
+            <a href="./lists.html" class="nav-link"
+              ><i class="ri-play-list-line pe-none me-xl-3"></i>
+              <p class="d-none d-xl-block">Listas</p>
+            </a>
+          </li>
+          <li class="nav-item text-center text-xl-start">
+            <a href="./reviews.html" class="nav-link active">
+              <i class="ri-star-line pe-none me-xl-3"></i>
+              <p class="d-none d-xl-block">Reseñas</p>
+            </a>
+          </li>
+          <li class="nav-item text-center text-xl-start">
+            <a href="./forums.html" class="nav-link"
+              ><i class="ri-user-smile-line pe-none me-xl-3"></i>
+              <p class="d-none d-xl-block">Foros</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container-right">
+        <header>
+          <!-- Toggle sidebar offcanvas -->
+          <div id="toggle" class="d-md-none">
+            <button
+              class="navbar-toggler p-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#staticBackdrop"
+              aria-controls="staticBackdrop"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                class="bi"
+                fill="white"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="header__search">
+            <i class="ri-search-line header__search--icon"></i>
+            <input
+              type="search"
+              name="fieldSearch"
+              id="searchBar"
+              class="header__search--input"
+              placeholder="Buscar"
+            />
+          </div>
+          <div class="header__btns">
+            <input
+              type="button"
+              value="Ingresa"
+              class="header__btns--login d-none d-md-block"
+            />
+            <input
+              type="button"
+              value="Regístrate"
+              class="header__btns--signin d-none d-md-block"
+              onclick="window.location.href='register_form.html'"
+            />
+          </div>
+        </header>
+        <!-- sections -->
+        <section
+          class="reviews d-flex flex-column flex-wrap justify-content-between align-items-center"
+        >
+          <div class="heading">
+            <h2>Últimas reseñas</h2>
+          </div>
+          <div class="content row">
+            <div class="review-1 row mt-5 pt-5 p-md-5 rounded col-12">
+              <div class="section-left col-12 col-md-4">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="img-fluid rounded"
+                    src="../assets/multimedia/borntodie.png"
+                    alt=""
+                  />
                 </div>
-                <div class="userButtons">
-                    <input type="button" value="Regístrate" class="buttonSignin" onclick="window.location.href='register_form.html'"/>
-                    <input type="button" value="Ingresa" class="buttonLogin" />
+                <div class="divider"><hr /></div>
+                <div class="text-container">
+                  <h2>Born To Die</h2>
+                  <h5>Álbum por Lana Del Rey</h5>
+                  <h6>Fecha de lanzamiento: 27 Enero 2012</h6>
+                  <h6>Calificación media: 4.0</h6>
+                  <p>
+                    Born to Die es el segundo álbum de estudio de la cantante y
+                    compositora estadounidense Lana Del Rey (y su álbum debut de
+                    manera oficial bajo el seudónimo de Lana Del Rey). Lanzado
+                    al mercado el 27 de enero de 2012, a través de los sellos
+                    discográficos Interscope Records, Polydor Records y Stranger
+                    Records.
+                  </p>
+                  <h6>Escucha en:</h6>
+                  <div class="icons d-flex gap-1">
+                    <img src="../assets/Icons/spotify (1).png" alt="" />
+                    <img src="../assets/Icons/pngwing.com.png" alt="" />
+                    <img src="../assets/Icons/klipartz.com.png" alt="" />
+                  </div>
                 </div>
-            </header>
-            <hr>
-            <!-- contenido -->
-            <section class="reviews">
-                <div class="heading"> 
-                    <h2>Últimas reseñas</h2>
-                </div>
-                <div class="content">
-                    <div class="review-1">
-                        <div class="section-left">
-                            <img src="./Assets/Multimedia/ab67616d0000b273cb76604d9c5963544cf5be64.png" alt=""/>
-                            <div class="divider"></div>
-                            <div class="text-container">
-                                <h3>Born To Die</h3>
-                                <h4>Álbum por Lana Del Rey</h4>
-                                <h5>Fecha de lanzamiento: 27 Enero 2012</h5>
-                                <h5>Calificación media: 4.0</h5>
-                                <p>Born to Die es el segundo álbum de estudio de la cantante y compositora estadounidense Lana Del Rey (y su álbum debut de manera oficial bajo el seudónimo de Lana Del Rey). Lanzado al mercado el 27 de enero de 2012, a través de los sellos discográficos Interscope Records, Polydor Records y Stranger Records.</p>
-                                <h3>Escucha en:</h3>
-                                <div class="icons">
-                                    <img src="./Assets/Icons/spotify (1).png" alt="" />
-                                    <img src="./Assets/Icons/pngwing.com.png" alt="" />
-                                    <img src="./Assets/Icons/klipartz.com.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-right">
-                            <h3>Username</h3>
-                            <h4>Calificación: 4.52</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur sapiente vel beatae magnam, nesciunt vitae illum natus ratione fugit illo, facilis necessitatibus corporis. Dolorum veritatis quod iste a eum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus maxime aut, nesciunt accusantium distinctio consequuntur expedita vero modi illo voluptate nostrum, esse corporis laborum! Rem aut consectetur sed omnis veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, neque, recusandae saepe quae esse modi porro quis dolor tempore sed, labore amet! Debitis placeat harum molestias, iste vel porro aspernatur!</p>
-                        </div>
+              </div>
+              <div class="section-right col-12 col-md-8 justify-content-center">
+                <div class="row justify-content-center">
+                  <div class="col-12 ps-5">
+                    <div class="row justify-content-center pt-4">
+                      <div class="col-12 pb-4">
+                        <h2>Titulo de Reseña</h2>
+                      </div>
+
+                      <div class="col-6">
+                        <h5>Username</h5>
+                      </div>
+                      <div class="col-6"><h5>Calificación: 4.52</h5></div>
+
+                      <div class="col-12 pt-2">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos tenetur sapiente vel beatae magnam, nesciunt
+                          vitae illum natus ratione fugit illo, facilis
+                          necessitatibus corporis. Dolorum veritatis quod iste a
+                          eum? Lorem, ipsum dolor sit amet consectetur
+                          adipisicing elit. Temporibus maxime aut, nesciunt
+                          accusantium distinctio consequuntur expedita vero modi
+                          illo voluptate nostrum, esse corporis laborum! Rem aut
+                          consectetur sed omnis veniam? Lorem ipsum dolor sit
+                          amet consectetur adipisicing elit. Consequuntur,
+                          neque, recusandae saepe quae esse modi porro quis
+                          dolor tempore sed, labore amet! Debitis placeat harum
+                          molestias, iste vel porro aspernatur!
+                        </p>
+                      </div>
                     </div>
-                    <div class="review-2">
-                        <div class="section-left">
-                            <img src="./Assets/Multimedia/FlowerBoy.png" alt=""/>
-                            <div class="divider"></div>
-                            <div class="text-container">
-                                <h3>Flower Boy</h3>
-                                <h4>Álbum por Tyler, The Creator</h4>
-                                <h5>Fecha de lanzamiento: 21 Julio 2017</h5>
-                                <h5>Calificación media: 4.0</h5>
-                                <p>Flower Boy (titulado también como Scum Fuck Flower Boy) es el cuarto álbum de estudio del rapero estadounidense Tyler, The Creator. Fue lanzado el 21 de julio de 2017 a través de Columbia Records.</p>
-                                <h3>Escucha en:</h3>
-                                <div class="icons">
-                                    <img src="./Assets/Icons/spotify (1).png" alt="" />
-                                    <img src="./Assets/Icons/pngwing.com.png" alt="" />
-                                    <img src="./Assets/Icons/klipartz.com.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-right">
-                            <h3>Username</h3>
-                            <h4>Calificación: 3.83</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur sapiente vel beatae magnam, nesciunt vitae illum natus ratione fugit illo, facilis necessitatibus corporis. Dolorum veritatis quod iste a eum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus maxime aut, nesciunt accusantium distinctio consequuntur expedita vero modi illo voluptate nostrum, esse corporis laborum! Rem aut consectetur sed omnis veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, neque, recusandae saepe quae esse modi porro quis dolor tempore sed, labore amet! Debitis placeat harum molestias, iste vel porro aspernatur!</p>
-                        </div>
-                    </div>
-                    <div class="review-3">
-                        <div class="section-left">
-                            <img src="./Assets/Multimedia/Inrainbowscover.png" alt=""/>
-                            <div class="divider"></div>
-                            <div class="text-container">
-                                <h3>In Rainbows</h3>
-                                <h4>Álbum por Radiohead</h4>
-                                <h5>Fecha de lanzamiento: 10 Octubre 2007</h5>
-                                <h5>Calificación media: 4.0</h5>
-                                <p>In Rainbows es el séptimo álbum de estudio de la banda británica de rock alternativo Radiohead. Originalmente se lanzó el 10 de octubre de 2007 en formato digital y se convino que los interesados en descargarlo pagaran lo que creyeran conveniente.</p>
-                                <h3>Escucha en:</h3>
-                                <div class="icons">
-                                    <img src="./Assets/Icons/spotify (1).png" alt="" />
-                                    <img src="./Assets/Icons/pngwing.com.png" alt="" />
-                                    <img src="./Assets/Icons/klipartz.com.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-right">
-                            <h3>Username</h3>
-                            <h4>Calificación: 5</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tenetur sapiente vel beatae magnam, nesciunt vitae illum natus ratione fugit illo, facilis necessitatibus corporis. Dolorum veritatis quod iste a eum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus maxime aut, nesciunt accusantium distinctio consequuntur expedita vero modi illo voluptate nostrum, esse corporis laborum! Rem aut consectetur sed omnis veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, neque, recusandae saepe quae esse modi porro quis dolor tempore sed, labore amet! Debitis placeat harum molestias, iste vel porro aspernatur!</p>
-                        </div>
-                    </div>
-                    <br>
-                    <p>Ver más reseñas</p>
+                  </div>
                 </div>
-            </section>
-            <!-- Pie de página -->
-            <footer>
-                <div class="footer">
-                    <h2>Musify.</h2>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Foros</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">Regístrate</a></li>
-                        <li><a href="#">Ingresa</a></li>
-                    </ul>
+              </div>
+            </div>
+            <div class="review-2 row mt-5 pt-5 p-md-5 rounded col-12">
+              <div class="section-left col-12 col-md-4">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="img-fluid rounded"
+                    src="../assets/multimedia/FlowerBoy.png"
+                    alt=""
+                  />
                 </div>
-                <p>Copyright © 2024 Musify. Page. All rights reserved.</p>
-            </footer>
+                <div class="divider"><hr /></div>
+                <div class="text-container">
+                  <h2>Flower Boy</h2>
+                  <h5>Álbum por Tyler, The Creator</h5>
+                  <h6>Fecha de lanzamiento: 21 Julio 2017</h6>
+                  <h6>Calificación media: 4.0</h6>
+                  <p>
+                    Flower Boy (titulado también como Scum Fuck Flower Boy) es
+                    el cuarto álbum de estudio del rapero estadounidense Tyler,
+                    The Creator. Fue lanzado el 21 de julio de 2017 a través de
+                    Columbia Records.
+                  </p>
+                  <h6>Escucha en:</h6>
+                  <div class="icons d-flex gap-1">
+                    <img src="../assets/Icons/spotify (1).png" alt="" />
+                    <img src="../assets/Icons/pngwing.com.png" alt="" />
+                    <img src="../assets/Icons/klipartz.com.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="section-right col-12 col-md-8 justify-content-center">
+                <div class="row justify-content-center">
+                  <div class="col-12 ps-5">
+                    <div class="row justify-content-center pt-4">
+                      <div class="col-12 pb-4">
+                        <h2>Titulo de Reseña</h2>
+                      </div>
+
+                      <div class="col-6">
+                        <h5>Username</h5>
+                      </div>
+                      <div class="col-6"><h5>Calificación: 3.83</h5></div>
+
+                      <div class="col-12 pt-2">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos tenetur sapiente vel beatae magnam, nesciunt
+                          vitae illum natus ratione fugit illo, facilis
+                          necessitatibus corporis. Dolorum veritatis quod iste a
+                          eum? Lorem, ipsum dolor sit amet consectetur
+                          adipisicing elit. Temporibus maxime aut, nesciunt
+                          accusantium distinctio consequuntur expedita vero modi
+                          illo voluptate nostrum, esse corporis laborum! Rem aut
+                          consectetur sed omnis veniam? Lorem ipsum dolor sit
+                          amet consectetur adipisicing elit. Consequuntur,
+                          neque, recusandae saepe quae esse modi porro quis
+                          dolor tempore sed, labore amet! Debitis placeat harum
+                          molestias, iste vel porro aspernatur!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review-2 row mt-5 pt-5 p-md-5 rounded col-12">
+              <div class="section-left col-12 col-md-4">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="img-fluid rounded"
+                    src="../assets/multimedia/Inrainbowscover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="divider"><hr /></div>
+                <div class="text-container">
+                  <h2>In Rainbows</h2>
+                  <h5>Álbum por Radiohead</h5>
+                  <h6>Fecha de lanzamiento: 10 Octubre 2007</h6>
+                  <h6>Calificación media: 4.0</h6>
+                  <p>
+                    In Rainbows es el séptimo álbum de estudio de la banda
+                    británica de rock alternativo Radiohead. Originalmente se
+                    lanzó el 10 de octubre de 2007 en formato digital y se
+                    convino que los interesados en descargarlo pagaran lo que
+                    creyeran conveniente.
+                  </p>
+                  <h6>Escucha en:</h6>
+                  <div class="icons d-flex gap-1">
+                    <img src="../assets/Icons/spotify (1).png" alt="" />
+                    <img src="../assets/Icons/pngwing.com.png" alt="" />
+                    <img src="../assets/Icons/klipartz.com.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="section-right col-12 col-md-8 justify-content-center">
+                <div class="row justify-content-center">
+                  <div class="col-12 ps-5">
+                    <div class="row justify-content-center pt-4">
+                      <div class="col-12 pb-4">
+                        <h2>Titulo de Reseña</h2>
+                      </div>
+
+                      <div class="col-6">
+                        <h5>Username</h5>
+                      </div>
+                      <div class="col-6"><h5>Calificación: 3.83</h5></div>
+
+                      <div class="col-12 pt-2">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos tenetur sapiente vel beatae magnam, nesciunt
+                          vitae illum natus ratione fugit illo, facilis
+                          necessitatibus corporis. Dolorum veritatis quod iste a
+                          eum? Lorem, ipsum dolor sit amet consectetur
+                          adipisicing elit. Temporibus maxime aut, nesciunt
+                          accusantium distinctio consequuntur expedita vero modi
+                          illo voluptate nostrum, esse corporis laborum! Rem aut
+                          consectetur sed omnis veniam? Lorem ipsum dolor sit
+                          amet consectetur adipisicing elit. Consequuntur,
+                          neque, recusandae saepe quae esse modi porro quis
+                          dolor tempore sed, labore amet! Debitis placeat harum
+                          molestias, iste vel porro aspernatur!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+          </div>
+          <div class="row mt-5">
+            <div class="col-12">
+              <a class="ver-mas" href="#">Ver más reseñas</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- footer -->
+        <footer
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div
+            class="footer__links d-flex flex-wrap justify-content-center align-items-center"
+          >
+            <h2>Musify.</h2>
+            <ul class="d-flex align-items-center">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Foros</a></li>
+              <li><a href="#">Regístrate</a></li>
+              <li><a href="#">Ingresa</a></li>
+            </ul>
+          </div>
+          <p>Copyright © 2024 Musify. Page. All rights reserved.</p>
+        </footer>
+      </div>
+
+      <!-- Sidebar offcanvas -->
+
+      <div
+        class="offcanvas offcanvas-start text-bg-dark"
+        data-bs-backdrop="static"
+        tabindex="-1"
+        id="staticBackdrop"
+        aria-labelledby="staticBackdropLabel"
+      >
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title ms-4" id="staticBackdropLabel">Musify.</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
         </div>
+        <div class="offcanvas-body">
+          <ul class="sidebar__nav nav flex-column mb-auto gap-3">
+            <li class="nav-item text-center">
+              <a
+                href="./index.html"
+                class="nav-link nav-link__offcanvas"
+                aria-current="page"
+                ><i class="ri-home-2-line pe-none me-3 text-light"></i>
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="./explore.html" class="nav-link nav-link__offcanvas"
+                ><i class="ri-menu-search-line pe-none me-3 text-light"></i>
+                Explorar
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="./lists.html" class="nav-link nav-link__offcanvas"
+                ><i class="ri-play-list-line pe-none me-3 text-light"></i>
+                Listas
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="./reviews.html" class="nav-link nav-link__offcanvas">
+                <i class="ri-star-line pe-none me-3 text-light"></i>
+                Reseñas
+              </a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="./forums.html" class="nav-link nav-link__offcanvas"
+                ><i class="ri-user-smile-line pe-none me-3 text-light"></i>
+                Foros
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
