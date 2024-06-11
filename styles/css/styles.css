@@ -739,6 +739,11 @@ label {
     border-top-left-radius: 8px !important;
     border-top-right-radius: 8px;
   }
+  .content {
+    min-width: 19rem !important;
+    max-width: 25rem !important;
+    margin-left: -13px;
+  }
 }
 @media (max-width: 767px) {
   .section-review__container {
@@ -746,12 +751,14 @@ label {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .section-review__container .card-review__left, .section-review__container .card-review__right {
+  .section-review__container .card-review__left,
+  .section-review__container .card-review__right {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .artist-section__heading h2, .section-review__heading h2 {
+  .artist-section__heading h2,
+  .section-review__heading h2 {
     font-size: 1.9rem;
   }
   header {
@@ -769,7 +776,8 @@ label {
     height: fit-content;
     max-width: 27rem;
   }
-  .section-review__container .card-review__left, .section-review__container .card-review__right {
+  .section-review__container .card-review__left,
+  .section-review__container .card-review__right {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
