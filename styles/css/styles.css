@@ -76,7 +76,7 @@ header {
 }
 
 .header__search {
-  min-width: 15rem;
+  min-width: max-content;
   width: 300px;
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ header {
 .header__search--input {
   background: transparent;
   border-style: none;
-  min-width: 16rem;
+  min-width: 15rem;
 }
 .header__search--input:focus {
   outline: none;

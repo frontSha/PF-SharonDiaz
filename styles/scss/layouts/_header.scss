@@ -9,7 +9,7 @@ header {
 }
 
 .header__search{
-    min-width: 15rem;
+    min-width: max-content;
     width: 300px;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@ header {
     &--input{
         background: transparent;
         border-style: none;
-        min-width: 16rem;
+        min-width: 15rem;
 
         &:focus{
             outline: none;
