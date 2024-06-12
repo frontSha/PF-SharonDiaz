@@ -361,10 +361,10 @@ footer .footer__links ul li a {
   color: #93c1cf;
 }
 .section-all .grid-all {
-  width: 100%;
+  width: 46.75rem;
   padding: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
 }
 .section-all .grid-all a {
@@ -440,11 +440,11 @@ footer .footer__links ul li a {
 
 .content {
   max-width: 60rem;
-  min-width: 22rem;
+  min-width: 20rem;
 }
 
 .reviews {
-  padding: 40px;
+  padding: 0 40px;
 }
 
 .section-left img {
@@ -612,7 +612,7 @@ aside ul li hr {
   background: #121212;
 }
 
-.container {
+.container-form {
   color: whitesmoke;
   max-width: 600px;
   margin: 50px auto;
@@ -689,10 +689,10 @@ label {
   .main-register {
     background-color: #1b2024;
   }
-  .container {
+  .container-form {
     padding: 20px;
   }
-  .container h1 {
+  .container-form h1 {
     font-size: 2.25em;
     font-weight: 600;
     color: whitesmoke;
@@ -740,9 +740,50 @@ label {
     border-top-right-radius: 8px;
   }
   .content {
-    min-width: 19rem !important;
+    min-width: 21rem !important;
     max-width: 25rem !important;
-    margin-left: -13px;
+    margin-left: -20px;
+  }
+  .content .reviews {
+    padding: 0 20px;
+  }
+  .section-explore {
+    padding: 40px 20px 0;
+  }
+  .section-explore h1 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .section-explore .grid-explore {
+    width: 100%;
+    padding: 0;
+  }
+  .section-explore .grid-item {
+    width: 9rem;
+    height: 14rem;
+  }
+  .section-all {
+    padding: 40px 20px;
+  }
+  .section-all h2 {
+    text-align: center;
+    font-size: 1.9em;
+  }
+  .section-all .grid-all {
+    width: 100%;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .section-all .grid-all .item-all {
+    height: 7.5rem;
+    width: 100%;
+  }
+  .section-all .grid-all .item-all p {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #1b2024;
   }
 }
 @media (max-width: 767px) {
@@ -781,6 +822,22 @@ label {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+}
+@media (max-width: 911px) and (min-width: 577px) {
+  .section-all h2 {
+    font-size: 1.9em;
+  }
+  .section-all .grid-all {
+    width: 31.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.7rem;
+  }
+  .section-all .grid-all .item-all {
+    max-height: 8.5rem;
+    min-height: 7rem;
+    width: 100%;
   }
 }
 @media (min-width: 992px) and (max-width: 1350px) {
