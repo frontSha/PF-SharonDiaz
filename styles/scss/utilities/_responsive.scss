@@ -1,4 +1,21 @@
 @media (max-width: 576px) {
+  .section-forums {
+    padding: 20px 20px;
+  }
+  .heading-forums {
+    padding: 40px 20px 0;
+    text-align: center;
+  }
+  .container-forums {
+    grid-template-columns: 1fr !important;
+    aside {
+      padding: 0 20px 40px;
+      padding-top: 0px !important;
+      ul {
+        flex-direction: column !important;
+      }
+    }
+  }
   .section-review {
     padding: 40px 20px;
     &__heading h2 {
@@ -58,41 +75,41 @@
     }
   }
 
-  .section-explore{
+  .section-explore {
     padding: 40px 20px 0;
 
-    h1{
+    h1 {
       text-align: center;
       font-size: 2.5em;
     }
-    .grid-explore{
+    .grid-explore {
       width: 100%;
       padding: 0;
     }
-    .grid-item{
+    .grid-item {
       width: 9rem;
       height: 14rem;
     }
   }
-  .section-all{
+  .section-all {
     padding: 40px 20px;
-    h2{
+    h2 {
       text-align: center;
       font-size: 1.9em;
     }
-    .grid-all{
+    .grid-all {
       width: 100%;
       padding: 20px 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.2rem;
 
-      .item-all{
-          height: 7.5rem;
-          width: 100%;
-          p{
-            @include font(1.5em,600,$color-general);
-          }
+      .item-all {
+        height: 7.5rem;
+        width: 100%;
+        p {
+          @include font(1.5em, 600, $color-general);
+        }
       }
     }
   }
@@ -141,21 +158,32 @@
     }
   }
 }
+@media (max-width: 928px) {
+  .container-forums {
+    aside {
+      ul {
+        li {
+          flex: 1 1 20%;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 911px) and (min-width: 577px) {
-  .section-all{
-    h2{
+  .section-all {
+    h2 {
       font-size: 1.9em;
     }
-    .grid-all{
-      width: calc((15rem*2) + 1.75rem);
+    .grid-all {
+      width: calc((15rem * 2) + 1.75rem);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.7rem;
-  
-      .item-all{
-          max-height: 8.5rem;
-          min-height: 7rem;
-          width: 100%;
+
+      .item-all {
+        max-height: 8.5rem;
+        min-height: 7rem;
+        width: 100%;
       }
     }
   }
@@ -169,6 +197,19 @@
 }
 
 @media (max-width: 1200px) {
+  .container-forums {
+    grid-template-columns: 1fr !important;
+    aside {
+      ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        li {
+          flex: 1 1 30%;
+        }
+      }
+    }
+  }
   .sidebar {
     max-width: 4.5rem !important;
     min-width: 4.5rem !important;
@@ -176,13 +217,13 @@
   .nav-link {
     justify-content: center;
     i {
-      color: #93c1cf !important;
+      color: $color-main !important;
     }
   }
   .nav-link:hover,
   .active {
     i {
-      color: whitesmoke !important;
+      color: $color-text-primary !important;
     }
   }
 }

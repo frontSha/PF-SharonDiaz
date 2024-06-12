@@ -521,7 +521,8 @@ footer .footer__links ul li a {
 .section-forums {
   padding: 40px 48px 0;
 }
-.section-forums .music-forum, .section-forums .general-forum {
+.section-forums .music-forum,
+.section-forums .general-forum {
   padding-bottom: 40px;
 }
 .section-forums h3 {
@@ -699,6 +700,23 @@ label {
   }
 }
 @media (max-width: 576px) {
+  .section-forums {
+    padding: 20px 20px;
+  }
+  .heading-forums {
+    padding: 40px 20px 0;
+    text-align: center;
+  }
+  .container-forums {
+    grid-template-columns: 1fr !important;
+  }
+  .container-forums aside {
+    padding: 0 20px 40px;
+    padding-top: 0px !important;
+  }
+  .container-forums aside ul {
+    flex-direction: column !important;
+  }
   .section-review {
     padding: 40px 20px;
   }
@@ -824,6 +842,11 @@ label {
     justify-content: space-evenly;
   }
 }
+@media (max-width: 928px) {
+  .container-forums aside ul li {
+    flex: 1 1 20%;
+  }
+}
 @media (max-width: 911px) and (min-width: 577px) {
   .section-all h2 {
     font-size: 1.9em;
@@ -847,6 +870,17 @@ label {
   }
 }
 @media (max-width: 1200px) {
+  .container-forums {
+    grid-template-columns: 1fr !important;
+  }
+  .container-forums aside ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .container-forums aside ul li {
+    flex: 1 1 30%;
+  }
   .sidebar {
     max-width: 4.5rem !important;
     min-width: 4.5rem !important;

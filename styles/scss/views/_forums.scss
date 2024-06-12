@@ -1,93 +1,94 @@
-.heading-forums{
-    @include font(2.4em,600,$color-main);
-    padding: 40px 48px 0;
+.heading-forums {
+  @include font(2.4em, 600, $color-main);
+  padding: 40px 48px 0;
 }
-.container-forums{
-    display: grid;
-    grid-template-columns: 70% 30%;
-    margin: auto;
+.container-forums {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: auto;
 }
-.section-forums{
-    padding: 40px 48px 0;
-    .music-forum, .general-forum{
-        padding-bottom: 40px;
+.section-forums {
+  padding: 40px 48px 0;
+  .music-forum,
+  .general-forum {
+    padding-bottom: 40px;
+  }
+  h3 {
+    color: $color-main;
+  }
+  table {
+    background-color: transparent;
+    border-style: none;
+    width: 100%;
+    border: solid 1px $color-text-quaternary;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    tbody {
+      tr:hover {
+        background-color: $color-bg-tertiary;
+      }
     }
-    h3{
-        color: $color-main;
+    thead {
+      th {
+        @extend td;
+        @include font(1.1em, 600, $color-text-primary);
+      }
+      background-color: $color-bg-secondary;
     }
-    table{
-        background-color: transparent;
-        border-style: none;
-        width: 100%;
-        border: solid 1px $color-text-quaternary;
-        border-collapse: collapse;
-        border-spacing: 0;
-        border-radius: 8px;
-        overflow: hidden;
-        tbody{
-            tr:hover{
-                background-color: $color-bg-tertiary;
-            }
-        }
-        thead{
-            th{
-                @extend td;
-                @include font(1.1em,600,$color-text-primary);
-            }
-            background-color: $color-bg-secondary;
-        }
+  }
+  td {
+    padding: 10px;
+    padding-inline-start: 1rem;
+  }
+  a {
+    text-decoration: none;
+    @include font(1.05em, 100, $color-text-secondary);
+    i {
+      margin-right: 1rem;
     }
-    td{
-        padding: 10px;
-        padding-inline-start: 1rem;
-    }
-    a{
+  }
+  p {
+    color: $color-text-quaternary;
+    margin-bottom: 0;
+  }
+}
+
+aside {
+  padding: 40px 48px;
+  h3 {
+    color: $color-main;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      max-width: 15rem;
+      a {
         text-decoration: none;
-        @include font(1.05em, 100, $color-text-secondary);
-        i{
-            margin-right: 1rem;
+        color: $color-text-secondary;
+        &:hover {
+          color: $color-text-tertiary;
         }
-    }
-    p{
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+      span {
+        padding-inline-start: 25px;
+        @include font(0.85em, 400, $color-text-quaternary);
+      }
+      hr {
         color: $color-text-quaternary;
-        margin-bottom: 0;
+      }
     }
-}
-
-aside{
-    padding: 40px 48px;
-    h3{
-        color: $color-main;
-        margin-bottom: 1rem;
-    }
-    ul{
-        list-style: none;
-        text-align: start;
-        display: flex;
-        flex-direction: column;
-        padding-inline-start: 0;
-
-        li{
-            display: flex;
-            flex-direction: column;
-            max-width: 15rem;
-            a{
-                text-decoration: none;
-                color: $color-text-secondary;
-                &:hover{
-                    color: $color-text-tertiary;
-                }
-                i{
-                    margin-right: .5rem;
-                }
-            }
-            span{
-                padding-inline-start: 25px;
-                @include font(.85em,400,$color-text-quaternary);
-            }
-            hr{
-                color: $color-text-quaternary;
-            }
-        }
-    }
+  }
 }
