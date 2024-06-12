@@ -1,0 +1,31 @@
+{
+  "name": "musify.",
+  "version": "1.0.0",
+  "description": "Musify es una comunidad para entusiastas de la música. Aquí podrán calificar, reseñar, comentar sobre su música preferida, y descubrir y explorar recomendaciones musicales.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontSha/PreEntrega3-SharonDiaz.git"
+  },
+  "keywords": [
+    "Música",
+    "calificar",
+    "reseñar",
+    "explorar",
+    "álbumes",
+    "artistas",
+    "reseñas",
+    "foros",
+    "minimalista",
+    "comunidad."
+  ],
+  "author": "Sharon Díaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontSha/PreEntrega3-SharonDiaz/issues"
+  },
+  "homepage": "https://github.com/frontSha/PreEntrega3-SharonDiaz#readme"
+}
