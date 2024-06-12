@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" Musify es una comunidad para entusiastas de la música. Aquí podrán calificar, reseñar, comentar sobre su música preferida, y descubrir y explorar recomendaciones musicales."
+    />
+    <meta
+      name="keywords"
+      content="Música, calificar, reseñar, explorar, álbumes, artistas, reseñas, foros, minimalista, comunidad."
+    />
     <title>Musify</title>
     <link
       rel="stylesheet"
@@ -14,17 +22,22 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/css/styles.css"/>
+    <link rel="icon" type="image/png" href="./assets/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles/css/styles.css" />
   </head>
   <body>
     <main class="d-flex no-wrap">
-      <div class="sidebar d-flex flex-column flex-shrink-0 p-xl-3 d-none d-md-block">
-        <div class="sidebar__logo d-flex align-items-center justify-content-center mb-3">
+      <div
+        class="sidebar d-flex flex-column flex-shrink-0 p-xl-3 d-none d-md-block"
+      >
+        <div
+          class="sidebar__logo d-flex align-items-center justify-content-center mb-3"
+        >
           <h1 class="d-none d-xl-block">Musify.</h1>
           <img
             class="mt-3 d-block d-xl-none"
             src="./assets/icons/musi.png"
-            alt=""
+            alt="icon Musify"
             width="25"
             height="25"
           />
@@ -99,7 +112,11 @@
             />
           </div>
           <div class="header__btns">
-            <input type="button" value="Ingresa" class="header__btns--login d-none d-md-block" />
+            <input
+              type="button"
+              value="Ingresa"
+              class="header__btns--login d-none d-md-block"
+            />
             <input
               type="button"
               value="Regístrate"
@@ -282,14 +299,17 @@
             </div>
           </div>
         </section>
-        <footer class="d-flex flex-column justify-content-center align-items-center">
-          <div class="footer__links d-flex flex-wrap justify-content-center align-items-center">
+        <footer
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div
+            class="footer__links d-flex flex-wrap justify-content-center align-items-center"
+          >
             <h2>Musify.</h2>
             <ul class="d-flex align-items-center">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Foros</a></li>
-              <li><a href="#">Regístrate</a></li>
-              <li><a href="#">Ingresa</a></li>
+              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="./pages/forums.html">Foros</a></li>
+              <li><a href="./pages/register_form.html">Regístrate</a></li>
             </ul>
           </div>
           <p>Copyright © 2024 Musify. Page. All rights reserved.</p>
@@ -324,7 +344,9 @@
               </a>
             </li>
             <li class="nav-item text-center">
-              <a href="./pages/explore.html" class="nav-link nav-link__offcanvas"
+              <a
+                href="./pages/explore.html"
+                class="nav-link nav-link__offcanvas"
                 ><i class="ri-menu-search-line pe-none me-3 text-light"></i>
                 Explorar
               </a>
@@ -336,7 +358,10 @@
               </a>
             </li>
             <li class="nav-item text-center">
-              <a href="./pages/reviews.html" class="nav-link nav-link__offcanvas">
+              <a
+                href="./pages/reviews.html"
+                class="nav-link nav-link__offcanvas"
+              >
                 <i class="ri-star-line pe-none me-3 text-light"></i>
                 Reseñas
               </a>
@@ -349,7 +374,7 @@
             </li>
           </ul>
         </div>
-      </div> 
+      </div>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
