@@ -488,6 +488,7 @@ footer .footer__links ul li a {
 .icons img {
   width: 25px;
   height: 25px;
+  margin-inline-end: 2px;
 }
 
 .ver-mas, .section-lists__a {
@@ -758,9 +759,8 @@ label {
     border-top-right-radius: 8px;
   }
   .content {
-    min-width: 21rem !important;
-    max-width: 25rem !important;
-    margin-left: -20px;
+    min-width: 20rem !important;
+    max-width: 100% !important;
   }
   .content .reviews {
     padding: 0 20px;
