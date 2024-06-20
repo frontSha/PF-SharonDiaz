@@ -2,8 +2,6 @@
     max-width: 230px;
     min-width: 230px;
     background: $color-general;
-    position: sticky;
-    top: 0;
 
     &__logo{
         @include font(2em,700,$color-text-primary);

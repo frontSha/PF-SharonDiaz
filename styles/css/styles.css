@@ -29,8 +29,6 @@ main {
   max-width: 230px;
   min-width: 230px;
   background: #1b2024;
-  position: sticky;
-  top: 0;
 }
 .sidebar__logo {
   font-size: 2em;
@@ -731,9 +729,6 @@ label {
     display: flex;
     flex-direction: column;
     min-width: 13rem;
-  }
-  .container-review__card .card-review__right {
-    text-align: justify;
   }
   .container-review__card .card-review__left h3 {
     font-size: 1.7em;
