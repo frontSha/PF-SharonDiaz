@@ -19,7 +19,7 @@ Web para entusiastas de la música, para compartir, calificar y reseñar, entre 
 
 ## Entrega
 
-Para la pre entrega 3, se finalizó la maquetación y los estilos de todas las páginas, se implementó SASS y se implementaron tecnicas SEO.  
+Se finalizó la maquetación y los estilos de todas las páginas, se implementó SASS y se implementaron técnicas SEO.  
 Todos los cambios realizados se versionaron con GIT.
 
 ## Licencia
